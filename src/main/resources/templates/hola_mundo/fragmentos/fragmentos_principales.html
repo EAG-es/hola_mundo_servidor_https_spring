@@ -1,0 +1,21 @@
+<head th:fragment="head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>     
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title th:text="${titulo_txt}"></title>
+    <link rel="icon" type="image/png" th:href="@{/imagenes/cripto y mas.png}">
+</head>
+<div class="container px-1 mx-1" th:fragment="cabecera">
+    <table>
+        <tr><td><img th:src="@{/imagenes/cripto y mas.png}" widh="100px" height="100px"alt="cripto y mas"/></td>
+            <td><h1 th:text="${titulo_txt}"></h1></td></tr>
+        <tr><td colspan="2"><h3 th:text="${subtitulo_txt}"></h3></td></tr>
+    </table>
+    <p style="color: red" th:if="${ok_txt != null and #strings.isEmpty(ok_txt) == false}" th:text="${ok_txt}"></p>
+    <p style="color: green" th:if="${mensaje_txt != null and #strings.isEmpty(mensaje_txt) == false}" th:utext="${mensaje_txt}"></p>
+</div>
+<input th:fragment="clave_valor_mapa_a_hidden" th:each="oculto: ${clave_valor_mapa}" type="hidden" th:name="${oculto.key}" th:value="${oculto.value}"/>
