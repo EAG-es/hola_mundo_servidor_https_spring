@@ -12,7 +12,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Hola_mundo_servidor_https_spring extends Servidor_https_spring {
-    public static String k_in_ruta = "in/inweb/spring/Hola_mundo_servidor_https_spring/in";
 
     public static void main(String[] args) {
         oks ok = new oks();
@@ -36,7 +35,6 @@ public class Hola_mundo_servidor_https_spring extends Servidor_https_spring {
         try {
             if (ok.es == false) { return ok.es; }
             ResourceBundle in;
-            in = ResourceBundles.getBundle(k_in_ruta);
             iniciar(ok);
             if (ok.es) {
                 while (true) {
