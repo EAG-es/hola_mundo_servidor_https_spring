@@ -40,7 +40,9 @@ public class Hola_mundo_servidor_https_spring extends Servidor_https_spring {
                     super.run(ok, extra_array);
                     break;
                 }
-                terminar(ok);
+                oks ok_fin = new oks();
+                terminar(ok_fin);
+                ok.setTxt(ok.getTxt(), ok_fin.getTxt());
             }
         } catch (Exception e) {
             ok.setTxt(e);
