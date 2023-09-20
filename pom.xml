@@ -55,7 +55,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>                            
                             <classpathPrefix>./</classpathPrefix>
-                            <mainClass>inweb.spring.hola_mundo_servidor_https_spring.hola_mundo_servidor_https_spring</mainClass>
+                            <mainClass>inweb.spring.hola_mundo_servidor_https_spring.Hola_mundo_servidor_https_spring</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
